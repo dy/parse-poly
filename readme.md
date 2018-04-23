@@ -1,6 +1,6 @@
 # parse-poly [![experimental](https://img.shields.io/badge/stability-unstable-green.svg)](http://github.com/badges/stability-badges) [![Build Status](https://travis-ci.org/dy/parse-poly.png)](https://travis-ci.org/dy/parse-poly)
 
-Take in any polygon or polyline argument and return array of coordinates.
+Take in any polygon or polyline argument and return array of coordinates. The returned array is always a copy of initial argument.
 
 [![npm install parse-poly](https://nodei.co/npm/parse-poly.png?mini=true)](https://npmjs.org/package/parse-poly/)
 
