@@ -1,0 +1,24 @@
+{
+  "name": "parse-poly",
+  "version": "1.0.0",
+  "description": "Parse any input polygon or polyline format",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dy/parse-poly.git"
+  },
+  "keywords": [
+    "poly",
+    "polygon",
+    "parse",
+    "polyline",
+    "path",
+    "points",
+    ""
+  ],
+  "author": "Dmitry Yv <dfcreative@gmail.com>",
+  "license": "MIT"
+}
