@@ -16,7 +16,7 @@ function parsePoly (arg) {
     list = arguments[0]
   }
 
-  // 'x y x y x y ...'
+  // 'x y x y x y ...', 'x,y x,y x,y ...'
   if (typeof list === 'string') {
     list = list.split(/\s|\s*,\s*/).map(parseFloat)
   }
@@ -29,18 +29,21 @@ function parsePoly (arg) {
   // [x, y, x, y, x, y, ...]
   if (list[0] != null) {
     if (typeof list[0] === 'number') {
-      for (i = 0, l = list.length / 2; i < l; i++) {
+      poly.length = l = list.length / 2
+      for (i = 0; i < l; i++) {
         poly[i] = [list[i*2], list[i*2 + 1]]
       }
     }
     // [[x,y], [x,y], ...]
     else if (list[0].length) {
-      for (i = 0, l = list.length; i < l; i++) {
+      poly.length = l = list.length
+      for (i = 0; i < l; i++) {
         poly[i] = [list[i][0], list[i][1]]
       }
     }
     // [{x,y}, {x,y}, ...]
     else if (list[0].x != null) {
+      poly.length = l = list.length
       for (i = 0, l = list.length; i < l; i++) {
         poly[i] = [list[i].x, list[i].y]
       }
