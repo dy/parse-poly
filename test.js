@@ -5,6 +5,7 @@ const a = require('assert')
 
 var result = [[10, 20], [30, 40], [50, 60]]
 
+a.deepEqual(parsePoly('10,20 30,40 50,60'), result)
 a.deepEqual(parsePoly('10 20 30 40 50 60'), result)
 a.deepEqual(parsePoly(10, 20, 30, 40, 50, 60), result)
 a.deepEqual(parsePoly([10, 20, 30, 40, 50, 60]), result)
